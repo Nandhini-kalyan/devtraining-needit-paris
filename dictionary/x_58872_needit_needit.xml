@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="needit" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="encode_utf8=false" label="Requested For" mandatory="true" max_length="32" name="u_reference_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request Type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="HR"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Your department choice" sequence="3" value="your_department_choice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal1" label="what needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="human resources 1" sequence="0" value="HR1"/>
+                <element inactive_on_update="false" label="human resources 2" sequence="1" value="HR2"/>
+                <element inactive_on_update="false" label="facilities 1" sequence="2" value="facilities_1"/>
+                <element inactive_on_update="false" label="facilities2" sequence="3" value="facilities_2"/>
+                <element inactive_on_update="false" label="legal1" sequence="4" value="legal1"/>
+                <element inactive_on_update="false" label="legal2" sequence="5" value="legal2"/>
+                <element inactive_on_update="false" label="your department choice 1" sequence="6" value="your_department_choice_1"/>
+                <element inactive_on_update="false" label="your department choice 2" sequence="7" value="your_department_choice_2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="when needed" max_length="40" name="when_needed" type="glide_date_time"/>
+    </element>
+</database>
